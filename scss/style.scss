@@ -1,0 +1,125 @@
+// Файл обнуляющих стилей
+@import "nullstyle.scss";
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;700&display=swap");
+
+body {
+	font-family: "Montserrat", sans-serif;
+	font-size: 15px;
+	color: #333333;
+}
+
+.container {
+	max-width: 1210px;
+	margin: 0 auto;
+}
+
+.header {
+	padding-top: 40px;
+	width: 100%;
+	height: 100vh;
+	background: url("../img/BackHeader.jpg") no-repeat center;
+
+	.header_inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.header_logo {
+		color: #ffffff;
+		font-family: Montserrat;
+		font-size: 30px;
+		font-weight: 700;
+	}
+
+	.header_nav {
+		a {
+			/* Style for "service" */
+			color: #ffffff;
+			font-family: Montserrat;
+			font-size: 14px;
+			font-weight: 400;
+			text-transform: uppercase;
+			transition: color 0.2s linear;
+			display: inline-block;
+			vertical-align: top;
+			margin: 15px;
+			position: relative;
+
+			&:hover {
+				color: #fce38a;
+				&:after {
+					opacity: 1;
+					transition: opacity 0.4s linear;
+				}
+			}
+			&::after {
+				content: "";
+				display: block;
+				width: 100%;
+				height: 3px;
+				opacity: 0;
+
+				background-color: #fce38a;
+
+				position: absolute;
+
+				top: 150%;
+				left: 0px;
+				z-index: 1;
+			}
+		}
+	}
+}
+
+.intro {
+	padding-top: 164px;
+	margin: 0 auto;
+}
+.intro_top-text {
+	color: #ffffff;
+	font-family: "Kaushan Script";
+	font-size: 72px;
+	font-weight: 400;
+	margin-bottom: 42px;
+}
+.intro_bottom-text {
+	color: #ffffff;
+	font-size: 150px;
+	font-weight: 700;
+	line-height: 140px;
+	text-transform: uppercase;
+	justify-content: center;
+	width: 802px;
+	height: 248px;
+	text-align: center;
+	margin: 0 auto;
+}
+.intro_bottom-text:after {
+	display: block;
+	content: "";
+	width: 60px;
+	height: 3px;
+	background-color: #ffffff;
+	margin: 71px auto;
+}
+.intro_inner {
+	text-align: center;
+	margin: 0 auto;
+}
+.btn {
+	display: inline-block;
+	vertical-align: top;
+	padding: 15px 32px 14px 31px;
+	margin: 150px 0 0 auto;
+	border: 3px solid #fff;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 700;
+	transition: background-color 0.2s linear, color 0.1s linear;
+}
+.btn:hover {
+	background-color: #fff;
+	color: #333333; //!makeanyfiles
+}
